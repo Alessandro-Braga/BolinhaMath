@@ -102,7 +102,7 @@ export default function StoryModeScreen2({ navigation }) {
   };
 
   const posicionarCachorrinhoPerto = () => {
-    posicaoInimigo.setValue(180); 
+    posicaoInimigo.setValue(50); 
     opacidadeInimigo.setValue(1);
   };
 
