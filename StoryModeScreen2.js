@@ -91,7 +91,7 @@ export default function StoryModeScreen2({ navigation }) {
 
   // --- ANIMAÇÕES ---
   const animarEntradaInimigo = () => {
-    posicaoInimigo.setValue(LARGURA_TELA + 180);
+    posicaoInimigo.setValue(LARGURA_TELA + 280);
     opacidadeInimigo.setValue(1);
     Animated.timing(posicaoInimigo, {
       toValue: LARGURA_TELA - 260, // Posição ideal para o tamanho de 135px
@@ -107,7 +107,7 @@ export default function StoryModeScreen2({ navigation }) {
       duration: 600,
       useNativeDriver: false,
     }).start(() => {
-      posicaoInimigo.setValue(LARGURA_TELA + 180);
+      posicaoInimigo.setValue(LARGURA_TELA + 280);
       if (callback) callback();
     });
   };
@@ -118,10 +118,10 @@ export default function StoryModeScreen2({ navigation }) {
       duration: 600,
       useNativeDriver: false,
     }).start(() => {
-      posicaoInimigo.setValue(LARGURA_TELA + 260);
+      posicaoInimigo.setValue(LARGURA_TELA + 460);
       setEtapa(6);
       Animated.timing(animacaoCoracao, {
-        toValue: 260,
+        toValue: 0,
         duration: 1000,
         useNativeDriver: false,
       }).start();
@@ -135,7 +135,7 @@ export default function StoryModeScreen2({ navigation }) {
       duration: 600,
       useNativeDriver: false,
     }).start(() => {
-      posicaoInimigo.setValue(LARGURA_TELA + 180);
+      posicaoInimigo.setValue(LARGURA_TELA + 280);
       proximaEtapa(8); // Segue para os monstros de divisão sem vida extra
     });
   };
