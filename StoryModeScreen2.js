@@ -72,8 +72,8 @@ export default function StoryModeScreen2({ navigation }) {
     if (proxima === 2) {
       gerarPerguntaMultiplicacao();
       animarEntradaInimigo();
-    } else if (proxima === 3) {
-      animarEntradaInimigo();
+    } else if (proxima === 3 || proxima === 4 || proxima === 5) {
+      posicionarCachorrinhoPerto(); // <--- O cachorrinho aparece pertinho da Bolinha aqui
     } else if (proxima === 8) {
       gerarPerguntaDivisaoDificil();
       animarEntradaInimigo();
@@ -91,14 +91,19 @@ export default function StoryModeScreen2({ navigation }) {
 
   // --- ANIMAÇÕES ---
   const animarEntradaInimigo = () => {
-    posicaoInimigo.setValue(LARGURA_TELA + 280);
+    posicaoInimigo.setValue(LARGURA_TELA + 180);
     opacidadeInimigo.setValue(1);
     Animated.timing(posicaoInimigo, {
-      toValue: LARGURA_TELA - 260, // Posição ideal para o tamanho de 135px
+      toValue: LARGURA_TELA - 190, // Posição ideal para o tamanho de 135px
       duration: 1800,
       easing: Easing.out(Easing.quad),
       useNativeDriver: false,
     }).start();
+  };
+
+  const posicionarCachorrinhoPerto = () => {
+    posicaoInimigo.setValue(180); 
+    opacidadeInimigo.setValue(1);
   };
 
   const animarMorteInimigo = (callback) => {
