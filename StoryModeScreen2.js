@@ -94,7 +94,7 @@ export default function StoryModeScreen2({ navigation }) {
     posicaoInimigo.setValue(LARGURA_TELA + 180);
     opacidadeInimigo.setValue(1);
     Animated.timing(posicaoInimigo, {
-      toValue: LARGURA_TELA - 190, // Posição ideal para o tamanho de 135px
+      toValue: LARGURA_TELA - 260, // Posição ideal para o tamanho de 135px
       duration: 1800,
       easing: Easing.out(Easing.quad),
       useNativeDriver: false,
