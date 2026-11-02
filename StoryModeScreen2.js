@@ -121,7 +121,7 @@ export default function StoryModeScreen2({ navigation }) {
       posicaoInimigo.setValue(LARGURA_TELA + 260);
       setEtapa(6);
       Animated.timing(animacaoCoracao, {
-        toValue: 1,
+        toValue: 10,
         duration: 1000,
         useNativeDriver: false,
       }).start();
